@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<title>XSwap| A decentralised exchange protocol forautomated liquidity</title>
+<link rel="icon" href="images/favicon.ico" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="db/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+a:hover {
+    /* color: #0056b3; */
+    text-decoration: none!important;
+}
+</style>
+<body class="db-light-grey">
+<div class="row">
+  <div class="col-md-2">
+    <!-- Top container -->
+    <div class="db-bar db-top db-black db-large" style="z-index:4">
+      <button class="db-bar-item db-button db-hide-large db-hover-none db-hover-text-light-grey" onclick="db_open();"><i class="fa fa-bars"></i>  Menu</button>
+    </div>
+
+    <!-- Sidebar/menu -->
+    <nav class="db-sidebar db-collapse db-white db-animate-left" style="z-index:3;width:242px;" id="mySidebar"><br>
+      <div class="db-container db-row">
+        <div style="padding-left:30px;display: flex; " class="db-col s12">
+          <img style="width: 125px;padding-top: 45px;"src="logoo.png">
+      </div>
+
+      <div class=" db-bar-block">
+        <!-- <a href="#" class="db-bar-item db-button db-padding-16 db-hide-large db-dark-grey db-hover-black" onclick="db_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a> -->
+        <a href="#" class="db-bar-item db-button db-padding db-blue"> Connect To Wallet</a>
+        <a href="#" class="db-bar-item db-button db-padding"><i class="fa fa-exchange"></i> Swap</a>
+        <a href="#" class="db-bar-item db-button db-padding"><i class="fa fa-line-chart "></i>  Scan</a>
+        <a href="#" class="db-bar-item db-button db-padding"><i class="fa fa-bullseye fa-fw"></i> WTRX</a>
+        <hr>
+        <a href="#" class="db-bar-item db-button db-padding"><i class="fa fa-question"></i> Help Center</a>
+        <a href="#" class="db-bar-item db-button db-padding"><i class="fa fa-bell fa-fw"></i> English / 中文</a>
+        <hr>
+        <a href="#" class="db-bar-item db-button db-padding"><i class="fa fa-telegram "></i> Telegram</a>
+        <a href="#" class="db-bar-item db-button db-padding"><i class="fa fa-twitter "></i> Twitter</a>
+        <a href="#" class="db-bar-item db-button db-padding"><i class="fa fa-weixin"></i> We Chat</a><br><br>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <!-- <div class="db-overlay db-hide-large db-animate-opacity" onclick="db_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div> -->
+
+  <!-- !PAGE CONTENT! -->
+    <div class="col-md-10 db-main" >
+      <!-- partial:index.partial.html -->
+        <body>
+          <div class="image-container set-full-height" >
+
+              <!--   Big container   -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <!-- Wizard container -->
+                    <div style="text-align: -webkit-center;" class="wizard-container">
+                      <div style="border-radius: 2.25rem;" class="card1 card wizard-card" data-color="red" id="wizard">
+                        <form action="" method="">
+                        <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+                          <div class="wizard-header">
+                            <h3 class="wizard-title">
+                              XSwap
+                            </h3>
+                            <h5> A decentralised exchange protocol forautomated liquidity</h5>
+                          </div>
+                          <div class="wizard-navigation">
+                            <ul >
+                              <li style="height: 33px;" ><a  href="#details" data-toggle="tab">Swap</a></li>
+                              <li style="height: 33px;"><a href="#captain" data-toggle="tab">Pool</a></li>
+                            </ul>
+                          </div>
+                          <div class="tab-content">
+                            <div class="tab-pane" id="details">
+                              <div class="row">
+                                  <div class="col-sm-6">
+                                    <div class="input-group">
+                                      <div class="form-group label-floating">
+                                        <label class="control-label">Enter an Amount</label>
+                                        <input name="name" type="text" class="form-control">
+                                      </div>
+                                    </div>
+
+                                    <div class="input-group">
+                                      <div class="form-group label-floating">
+                                        <label class="control-label">Enter an Amount</label>
+                                        <input name="name2" type="password" class="form-control">
+                                      </div>
+                                    </div>
+                                    <div class="input-group">
+                                      <div class="form-group label-floating">
+                                        <label class="control-label">View Token</label>
+                                        <input name="name2" type="password" class="form-control">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                    <div class="form-group label-floating">
+                                      <label class="control-label">Balance</label>
+                                      <select class="form-control">
+                                        <option value="Afghanistan"> TRX </option>
+                                        <option value="Albania">WTRX </option>
+                                        <option value="Algeria"> SUN</option>
+                                        <option value="American Samoa"> JST</option>
+                                        <option value="Andorra"> WIN </option>
+                                        <option value="Angola"> DICE</option>
+                                      </select>
+                                    </div>
+                                    <div style="top: 17px;" class="form-group label-floating">
+                                      <label class="control-label">Select Token</label>
+                                      <select class="form-control">
+                                        <option disabled="" selected=""></option>
+                                        <option value="Afghanistan"> TRX </option>
+                                        <option value="Albania">WTRX </option>
+                                        <option value="Algeria"> SUN</option>
+                                        <option value="American Samoa"> JST</option>
+                                        <option value="Andorra"> WIN </option>
+                                        <option value="Angola"> DICE</option>
+                                      </select>
+                                    </div>
+                                    <div style="top: 28px;" class="form-group label-floating">
+                                      <label class="control-label">Select Token</label>
+                                      <select class="form-control">
+                                        <option value="Afghanistan"> TRX </option>
+                                        <option value="Albania">WTRX </option>
+                                        <option value="Algeria"> SUN</option>
+                                        <option value="American Samoa"> JST</option>
+                                        <option value="Andorra"> WIN </option>
+                                        <option value="Angola"> DICE</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div style="text-align: center;" class="col-md-12">
+                                    <button style="margin: 10px;" class="single blue">Connect To Wallet</button>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane" id="captain">
+                              
+                              <div class="row">
+                                <div style="text-align: center;" class="col-md-12">
+                                  <button style="margin: 10px;" class="single blue">Add Liquidity</button>
+                                </div>
+                                  <div class="col-md-6">
+                                    <span class="input-label">Your Liquidity</span> 
+                                  </div>
+                                  <div  class="col-md-6">
+                                    <i class="fa fa-question"></i>
+                                  </div>
+                                  <div style="margin-top: 40px;" class="col-md-12">
+                                      <span >Connect To your Wallet to view your liquidity</span> 
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      
+                    <div style="margin-top: 20px;color:white" class="col-md-12">
+                      <span >v1.0.3 | Audit Report | Developer Documentation</span> 
+                  </div>
+                    </div> <!-- wizard container -->
+                  </div>
+                
+                </div> <!-- row -->
+                
+              </div> <!--  big container -->
+              
+          </div>
+      </body>
+      <!-- partial -->  
+      
+    </div>
+</div>
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function db_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function db_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script  src="db/script.js"></script>
+</body>
+</html>
